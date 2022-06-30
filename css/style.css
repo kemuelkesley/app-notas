@@ -1,0 +1,59 @@
+.titulo__aluno{
+    text-align: center;    
+    padding: 15px;
+}
+
+.tiuloAdicionar__alunos{
+    padding: 10px;
+}
+
+#cabecalho__tabela{
+    font-size: 17px;
+}
+
+.largura__container{
+    width: 100%;
+    height: 100vh;
+}
+
+
+#botao{
+    width: 115px;
+    height: 45px;
+}
+
+
+.div__button{
+    padding: 15px; 
+    padding-left: 4px;
+}
+
+.diminuir__container{
+    width: 25%;
+}
+
+/* Diminuir inputs */
+
+.diminuirId__aluno{
+    width: 50%;
+}
+
+.diminuirNome__aluno{
+    width: 50%;
+}
+
+.diminuirAv1__aluno{
+    width: 50%;
+}
+
+.diminuirAv2__aluno{
+    width: 50%;
+}
+
+.diminuirMedia__final{
+    width: 50%;
+}
+
+.diminuirAprovado__reprovado{
+    width: 50%;
+}
