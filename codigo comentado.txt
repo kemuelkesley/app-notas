@@ -1,0 +1,23 @@
+
+botao.on('click', (e) => {
+    e.preventDefault();
+        
+    // let listaCampos = [
+    //    `Id do Aluno: ${idAluno.val()}`,
+    //    `Nome do Aluno: ${nomeAluno.val()}`,
+    //    `Nota da AV1: ${notaAv1.val()}`,
+    //    `Nota da AV2: ${notaAv2.val()}`,
+    //    `Media Final: ${mediaFinal.val()}`,
+    //    `Aprovado ou Reprovado: ${aprovadoReprovado.val()}`
+    // ]
+    // console.log(listaCampos)
+
+    // Clicar no botão e ele adiciona nome, nota, media e se o aluno foi aprovado ou reprovado.
+    // let clone = $('.table-hover').find('tr').eq(1).clone()
+    // clone.children().eq(0).html(idAluno.val())
+    // clone.children().eq(1).html(nomeAluno.val())
+    // clone.children().eq(2).html(notaAv1.val())
+    // clone.children().eq(3).html(notaAv2.val())
+    // clone.children().eq(4).html(mediaFinal.val())
+    // clone.children().eq(5).html(aprovadoReprovado.val())
+}   

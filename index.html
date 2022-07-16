@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="css/mdb.min.css" />
     <!--CSS-->
     <link rel="stylesheet" href="./css/style.css">
+    <!--Jquery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
   </head>
   <body>
     
@@ -29,14 +31,15 @@
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="./img/sala.png" alt="logokemsoftware" width="100px" height="80px" loading="lazy">
-                <p>Sala de Aula</p>
+                <p>Sala de Aula</p>                
             </a>
+            <p class="versao">Versão Teste 1.0</p>
         </div>
     </nav>
 
 
     <div class="container titulo__aluno">
-        <h3>Notas dos Alunos</h3>
+        <h3>Nota dos Alunos</h3>
     </div>
 
 
@@ -54,22 +57,14 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Aluno teste</td>
-                    <td>7</td>
-                    <td>8</td>
-                    <td>7.5</td>
-                    <td>Aprovado</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Aluno teste 2</td>
-                    <td>7</td>
-                    <td>7</td>
-                    <td>7</td>
-                    <td>Aprovado</td>
-                </tr>            
+                <tr class="aluno">
+                    <td class="id"></td>
+                    <td class="nome"></td>
+                    <td class="av1"></td>
+                    <td class="av2"></td>
+                    <td class="media-final"></td>
+                    <td class="aprovado-reprovado"></td>
+                </tr>               
             </tbody>        
         </table>
     </div>    
@@ -78,13 +73,14 @@
         <h3 class="">Adicionar Notas dos Alunos</h3>
     </div>
 
+    
     <div class="container">    
-        <section>        
+        <form autocomplete="off" >        
             <div class="form-row">
                 <div class="col">
                     <!-- Name input -->
                     <div class="form-outline diminuirId__aluno">
-                    <input type="number" name="id__aluno" id="id__aluno" min="0" class="form-control"/>
+                    <input type="number" name="id__aluno" id="id__aluno" min="0"  class="form-control"/>
                     <label class="form-label" for="id__aluno">Id</label>
                     </div>  
                 </div>
@@ -92,7 +88,7 @@
                 <div class="col">
                     <!-- Name input -->
                     <div class="form-outline diminuirNome__aluno">
-                    <input type="text" name="nome__aluno" id="nome__aluno" class="form-control" />
+                    <input type="text" name="nome__aluno" id="nome__aluno"  class="form-control" />
                     <label class="form-label" for="nome__aluno">Nome do Aluno</label>
                     </div> 
                 </div>
@@ -100,7 +96,7 @@
                 <div class="col">
                     <!-- Name input -->
                     <div class="form-outline diminuirAv1__aluno">
-                    <input type="number" name="nota__av1" id="nota__av1" min="0" maxlength="0.0" class="form-control" />
+                    <input type="number" name="nota__av1" id="nota__av1" min="0"  class="form-control" />
                     <label class="form-label" for="nota__av1">Nota da AV1</label>
                     </div> 
                 </div>
@@ -108,23 +104,22 @@
                 <div class="col">
                     <!-- Name input -->
                     <div class="form-outline diminuirAv2__aluno">
-                    <input type="number" name="nota__av2" id="nota__av2" min="0" class="form-control" />
+                    <input type="number" name="nota__av2" id="nota__av2" min="0"  class="form-control" />
                     <label class="form-label" for="nota__av2">Nota da AV2</label>
                     </div> 
                 </div>
-                <br>
-                <div class="col">
-                    <!-- Name input -->
+               
+                <div class="col">                    
                     <div class="form-outline diminuirMedia__final">
-                    <input type="number" name="media__final" id="media__final" min="0" class="form-control" />
-                    <label class="form-label" for="media__final" >Media Final</label>
+                    <input type="number" name="media__final" id="media__final" min="0"  class="form-control"/>
+                    <label class="form-label" for="media__final">Media Final</label>
                     </div> 
                 </div>
-                <br>
+                
                 <div class="col">
                     <!-- Name input -->
                     <div class="form-outline diminuirAprovado__reprovado">
-                    <input type="text" name="aprovado__reprovado" id="aprovado__reprovado" class="form-control" />
+                    <input type="text" name="aprovado__reprovado" id="aprovado__reprovado"  class="form-control" />
                     <label class="form-label" for="aprovado__reprovado">Aprovado/Reprovado</label>
                     </div> 
                 </div>
@@ -133,7 +128,7 @@
             <div class="container div__button">
                 <button type="submit" class="btn btn-primary" id="botao">Adicionar</button>
             </div>            
-        </section>
+        </form>
     </div>    
 
 
@@ -149,11 +144,17 @@
     </footer>
     <!-- Footer -->
 
+
+    <!--JS app-->
+    <script src="./js/script.js">
+        // stopEvento();
+    </script>
     <!-- MDB -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
     <!-- Custom scripts -->
     <script type="text/javascript"></script>
     <!--Script JS-->
     <link rel="stylesheet" href="./js/script.js">
+    
   </body>
 </html>
