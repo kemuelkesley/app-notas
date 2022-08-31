@@ -21,3 +21,13 @@ botao.on('click', (e) => {
     // clone.children().eq(4).html(mediaFinal.val())
     // clone.children().eq(5).html(aprovadoReprovado.val())
 }   
+
+dicas de riquerid
+
+// textarea
+$('textarea').prop('required',true);
+$('textarea').prop('required',false);
+ 
+// inputs
+$("input").prop('required',true);
+$("input").prop('required',false);

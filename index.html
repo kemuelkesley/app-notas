@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
     />
     <!-- MDB -->
-    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="css/mdb.min.css"/>
     <!--CSS-->
     <link rel="stylesheet" href="./css/style.css">
     <!--Jquery-->
@@ -33,7 +33,7 @@
                 <img src="./img/sala.png" alt="logokemsoftware" width="100px" height="80px" loading="lazy">
                 <p>Sala de Aula</p>                
             </a>
-            <p class="versao">Versão Teste 1.0</p>
+            <p class="versao">Versão Teste 1.1</p>
         </div>
     </nav>
 
@@ -48,22 +48,24 @@
         <table class="table table table-hover">
             <thead class="table-light">
                 <tr id="cabecalho__tabela">
-                    <th>Id</th>
+                    <!-- <th>Id</th> -->
                     <th>Nome do Aluno</th>
                     <th>AV1</th>
                     <th>AV2</th>
                     <th>Media Final</th>
                     <th>Aprovado/Reprovado</th>
+                    <th>Remover</th>
                 </tr>
             </thead>
             <tbody>
                 <tr class="aluno">
-                    <td class="id"></td>
+                    <!-- <td class="id"></td> -->
                     <td class="nome"></td>
                     <td class="av1"></td>
                     <td class="av2"></td>
                     <td class="media-final"></td>
                     <td class="aprovado-reprovado"></td>
+                    <td class="remover"></td>
                 </tr>               
             </tbody>        
         </table>
@@ -77,18 +79,17 @@
     <div class="container">    
         <form autocomplete="off" >        
             <div class="form-row">
-                <div class="col">
-                    <!-- Name input -->
+                <div class="col">                    
                     <div class="form-outline diminuirId__aluno">
-                    <input type="number" name="id__aluno" id="id__aluno" min="0"  class="form-control"/>
+                    <input type="number" name="id__aluno" id="id__aluno" min="0" class="form-control"/>
                     <label class="form-label" for="id__aluno">Id</label>
                     </div>  
                 </div>
-                <br>
+                
                 <div class="col">
                     <!-- Name input -->
                     <div class="form-outline diminuirNome__aluno">
-                    <input type="text" name="nome__aluno" id="nome__aluno"  class="form-control" />
+                    <input type="text" name="nome__aluno" id="nome__aluno" required class="form-control" maxlength="50" />
                     <label class="form-label" for="nome__aluno">Nome do Aluno</label>
                     </div> 
                 </div>
@@ -96,7 +97,7 @@
                 <div class="col">
                     <!-- Name input -->
                     <div class="form-outline diminuirAv1__aluno">
-                    <input type="number" name="nota__av1" id="nota__av1" min="0"  class="form-control" />
+                    <input type="number" name="nota__av1" id="nota__av1" min="0" onkeypress="$(this).mask('0.0')"  required class="form-control" />
                     <label class="form-label" for="nota__av1">Nota da AV1</label>
                     </div> 
                 </div>
@@ -104,7 +105,7 @@
                 <div class="col">
                     <!-- Name input -->
                     <div class="form-outline diminuirAv2__aluno">
-                    <input type="number" name="nota__av2" id="nota__av2" min="0"  class="form-control" />
+                    <input type="number" name="nota__av2" id="nota__av2" min="0" onkeypress="$(this).mask('0.0')" required class="form-control" />
                     <label class="form-label" for="nota__av2">Nota da AV2</label>
                     </div> 
                 </div>
@@ -123,10 +124,16 @@
                     <label class="form-label" for="aprovado__reprovado">Aprovado/Reprovado</label>
                     </div> 
                 </div>
+                
+                
             </div>
             
             <div class="container div__button">
-                <button type="submit" class="btn btn-primary" id="botao">Adicionar</button>
+                <button  class="btn btn-primary" id="botao">Adicionar</button>
+            </div>            
+            
+            <div class="botao-delete">
+                <button  class="btn btn-primary" id="btn-deletar">Deletar</button>
             </div>            
         </form>
     </div>    
@@ -134,13 +141,11 @@
 
     <!-- Footer -->
     <footer class="page-footer font-small blue">
-
         <!-- Copyright -->
         <div class="footer-copyright text-center py-3">© 2022 Copyright:
           <a href="https://github.com/kemuelkesley" target="_blank"> KemSoftware</a>
         </div>
         <!-- Copyright -->
-  
     </footer>
     <!-- Footer -->
 
@@ -155,6 +160,13 @@
     <script type="text/javascript"></script>
     <!--Script JS-->
     <link rel="stylesheet" href="./js/script.js">
+<!-- 
+    <script src="jquery.js" type="text/javascript"></script>
+    
+    <script src="jquery.maskedinput.js" type="text/javascript"></script> -->
+
+    <!--Mascaras (tel, CEP e CPF)-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
     
   </body>
 </html>
